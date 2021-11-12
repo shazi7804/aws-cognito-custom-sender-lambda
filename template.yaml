@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  CognitoCustomSender
+
+  Sample SAM Template for CognitoCustomSender
+  
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 3
+
+Resources:
+  CognitoCustomSenderFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: src/
+      Handler: index.handler
+      Runtime: nodejs12.x
+      Environment:
+        Variables:
+          KEY_ID: "arn:aws:kms:us-east-1:381354187112:key/e3c84dc4-9f89-4092-8b5c-6479ceda1f4f"
+          KEY_ALIAS: "arn:aws:kms:us-east-1:381354187112:alias/cognito/customSenderLambda"
+          SENDER: "shazi7804@gmail.com"

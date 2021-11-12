@@ -1,0 +1,25 @@
+{
+  "name": "aws-cognito-custom-sender-lambda",
+  "version": "1.0.0",
+  "description": "AWS Cognito custom sender trigger Lambda sample.",
+  "main": "lambda.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shazi7804/aws-cognito-custom-sender-lambda.git"
+  },
+  "author": "shazi7804",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shazi7804/aws-cognito-custom-sender-lambda/issues"
+  },
+  "homepage": "https://github.com/shazi7804/aws-cognito-custom-sender-lambda#readme",
+  "dependencies": {
+      "nodemailer": "6.7.0",
+      "@aws-crypto/client-node": "^3.1.0",
+      "base64-js": "1.5.1"
+  }
+}
+
