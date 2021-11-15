@@ -18,6 +18,7 @@ exports.handler = async(event) => {
         plainTextCode = plaintext
     }
 
+    // Custom email provider when triggerSource is 'CustomEmailSender_SignUp'
     if (event.triggerSource == 'CustomEmailSender_SignUp') {
         var msg = {
             Destination: {
